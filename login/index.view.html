@@ -1,0 +1,28 @@
+<div class="col-md-6 col-md-offset-3">
+    <div class="alert alert-info">
+        Usuário: teste<br />
+        Senha: teste
+    </div>
+    <h2>Entrar</h2>
+    <form name="form" ng-submit="form.$valid && viewModel.login()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.usuario.$invalid }">
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" class="form-control" ng-model="viewModel.usuario" required />
+            <div ng-messages="form.$submitted && form.usuario.$error" class="validacao-msg">
+                    <div ng-message="required">Campo 'Usuário' é obrigatório</div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': form.$submitted && form.senha.$invalid }">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" ng-model="viewModel.senha" required />
+            <div ng-messages="form.$submitted && form.senha.$error" class="validacao-msg">
+                <div ng-message="required">Campo 'Senha' é obrigatório</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button ng-disabled="viewModel.loading" class="btn btn-primary">Login</button> 
+            <img ng-if="viewModel.loading" src="https://goo.gl/xob0vd" />   
+        </div>
+        <div ng-if="viewModel.error" class="alert alert-danger">{{viewModel.error}}</div>
+    </form>
+</div>
