@@ -1,6 +1,6 @@
 # Tutorial: Desenvolvendo uma Aplicação de Autenticação JWT com AngularJs (v.1)
 
-Código desenvolvido durante o artigo escrito sobre como criar uma Aplicação de Autenticação JWT com AngularJs. O tutorial segue no seu site: [Code4Coders] (www.code4coders.wordpress.com)
+Código desenvolvido durante o artigo escrito sobre como criar uma Aplicação de Autenticação JWT com AngularJs. O tutorial segue no seu site: [Code4Coders](www.code4coders.wordpress.com)
 
 ## Recursos utilizados no desenvolvimento:
 
@@ -12,7 +12,7 @@ Código desenvolvido durante o artigo escrito sobre como criar uma Aplicação d
 
 ## Demo do projeto
 
-[App Demo](https://run.plnkr.co/plunks/Rkaqe7/#/login)
+[Demo da App](https://run.plnkr.co/plunks/Rkaqe7/#/login)
 
 
 ## Executar Localmente
