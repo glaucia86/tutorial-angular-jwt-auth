@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="app">
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tutorial - Autenticação JWT com AngularJs</title>
+<head>
 
-        <!-- Bootstrap theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,700" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" />
+  <title>Tutorial - Autenticação JWT com AngularJs</title>
 
-        <!-- application css -->
-        <link href="content/app.css" rel="stylesheet" />
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-    </head>
-    <body>
-        <div class="container theme-showcase" role="main">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,700" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic" />
 
-            <!-- main app container -->
-            <div class="jumbotron">
-                <h1 class="text-center"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Coder4Coders</h1>
-                <h2 class="text-center">Tutorial - Autenticação JWT com AngularJs</h2>
-                <h3 class="text-center">Glaucia Lemos</h3>
-                <ui-view></ui-view>
-            </div>
-        </div>
+  <!-- application css -->
+  <link href="content/app.css" rel="stylesheet" />
 
-        <footer>
-	        <p class="text-center">Desenvolvido com muito <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Rio de Janeiro <a href="http://www.code4coders.wordpress.com" target="_blank"> - 2017</a></p>
-        </footer><!--/ footer -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-        <!-- angular scripts -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
 
-        <!-- application scripts -->
-        <script src="app.js"></script>
-        <script src="services/auth.service.js"></script>
-        <script src="home/index.controller.js"></script>
-        <script src="login/index.controller.js"></script>
+</head>
 
-        <!-- scripts para criar um back end falso -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-mocks.js"></script>
-        <script src="helpers/mock-backend.js"></script>
-    </body>
+<body>
+  <div class="container theme-showcase" role="main">
+
+    <!-- main app container -->
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Coder4Coders</h1>
+      <h2 class="text-center">Tutorial - Autenticação JWT com AngularJs</h2>
+      <h3 class="text-center">Glaucia Lemos</h3>
+
+    </div>
+    <ui-view></ui-view>
+  </div>
+
+  <footer>
+    <p class="text-center">Desenvolvido com muito <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Rio de Janeiro <a href="http://www.code4coders.wordpress.com" target="_blank"> - 2017</a></p>
+  </footer>
+  <!--/ footer -->
+
+  <!-- angular scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+  <!-- application scripts -->
+  <script src="app.js"></script>
+  <script src="services/auth.service.js"></script>
+  <script src="home/index.controller.js"></script>
+  <script src="login/index.controller.js"></script>
+
+  <!-- scripts para criar um back end falso -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-mocks.js"></script>
+  <script src="helpers/mock-backend.js"></script>
+</body>
+
 </html>

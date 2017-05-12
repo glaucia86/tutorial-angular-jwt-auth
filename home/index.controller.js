@@ -6,8 +6,8 @@
  * 
  */
 
-(function() {
-    'use strict'
+(function () {
+    'use strict';
 
     angular
         .module('app')
@@ -19,7 +19,7 @@
         initController();
 
         function initController() {
-
         }
     }
+
 })();

@@ -7,34 +7,35 @@
  */
 
 (function() {
-    'use strict';
+  'use strict';
 
-    angular
-        .module('app')
-        .controller('Login.IndexController', Controller);
+  angular
+    .module('app')
+    .controller('Login.IndexController', Controller);
 
-        function Controller($location, AuthenticationService) {
-            var viewModel = this;
+  function Controller($location, AuthenticationService) {
+    var viewModel = this;
 
-            viewModel.login = login;
+    viewModel.login = login;
 
-            initController();
+    initController();
 
-            function initController() {
-                //Aqui iremos resetar o status do login:
-                AuthenticationService.Logout();
-            };
+    function initController() {
+      //Aqui iremos resetar o status do login:
+      AuthenticationService.Logout();
+    };
 
-            function Login() {
-                viewModel.loading = true;
-                AuthenticationService.Login(viewModel.usuuario, viewModel.senha, function(result) {
-                    if (result === true) {
-                        $location.path('/');
-                    } else {
-                        viewModel.error = 'Usuário e senha estão incorretos!';
-                        viewModel.loading = false;
-                    }
-                });
-            };
+    function login() {
+      viewModel.loading = true;
+      AuthenticationService.Login(viewModel.username, viewModel.password, function(result) {
+        if (result === true) {
+          $location.path('/');
+        } else {
+          viewModel.error = 'Usuário e senha estão incorretos!';
+          viewModel.loading = false;
         }
+      });
+    };
+  }
+
 })();
